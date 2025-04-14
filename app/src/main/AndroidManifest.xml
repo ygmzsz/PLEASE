@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.assignment3mobileapp">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -45,23 +46,17 @@
         <service
             android:name=".MyAppService"
             android:enabled="true"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
 
-        <receiver
-            android:name=".MyAppReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="com.example.lecture4.ACTION_UPDATE" />
-            </intent-filter>
-        </receiver>
+        <!-- Note: The MyAppReceiver is registered dynamically in MainActivity, so we don't need to declare it here -->
 
         <receiver
             android:name=".MyAppWidgetProvider"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.lecture4.ACTION_UPDATE" />
+                <action android:name="com.example.assignment3mobileapp.ACTION_UPDATE" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"

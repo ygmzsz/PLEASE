@@ -1,3 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Assignment3MobileApp</string>
+
+    <!-- Button text -->
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+
+    <!-- Status text -->
+    <string name="service_stopped">Service status: Stopped</string>
+    <string name="service_running">Service status: Running</string>
+    <string name="latest_update">Latest update: %1$s</string>
+
+    <!-- Permissions -->
+    <string name="location_permission_title">Location Permission Needed</string>
+    <string name="location_permission_message">This app needs location permission to show your current location on the map.</string>
+    <string name="notification_permission_denied">Notification permission denied</string>
+    <string name="location_permission_denied">Location permission denied</string>
+
+    <!-- General -->
+    <string name="ok">OK</string>
 </resources>

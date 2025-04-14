@@ -62,8 +62,7 @@ class MyAppWidgetProvider : AppWidgetProvider() {
             // Create an Intent to launch the app when widget is clicked
             val intent = Intent(context, MainActivity::class.java)
             val pendingIntent = PendingIntent.getActivity(
-                context, 0, intent,
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) PendingIntent.FLAG_IMMUTABLE else 0
+                context, 0, intent, PendingIntent.FLAG_IMMUTABLE
             )
             views.setOnClickPendingIntent(R.id.widget_layout, pendingIntent)
 
